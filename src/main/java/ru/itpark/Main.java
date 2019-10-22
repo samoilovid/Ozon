@@ -12,7 +12,8 @@ public class Main {
                 388,
                 0
 
-        );    Pen penTwo = new Pen(
+        );
+        Pen penTwo = new Pen(
                 139574473,
                 "Action",
                 "https://cdn1.ozone.ru/multimedia/c250/1017328084.jpg",
@@ -22,7 +23,8 @@ public class Main {
                 108,
                 1
 
-        );    Pen penTree = new Pen(
+        );
+        Pen penTree = new Pen(
                 146093392,
                 "Affache",
                 "https://cdn1.ozone.ru/multimedia/c1200/1023484393.jpg",

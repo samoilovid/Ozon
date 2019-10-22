@@ -7,20 +7,22 @@ public class CartService {
     private int amountDiscount;
     private int numberGoods;
     private int size = 10;
-    private Pen [] addCart = new Pen[size];
+    private Pen[] addCart = new Pen[size];
 
-    public void add(Pen pen){
+    public void add(Pen pen) {
         int index = pen.getIndex();
-        if (addCart[index] == null){
+        if (addCart[index] == null) {
             addCart[index] = pen;
             amount += addCart[index].getPrice();
             amountDiscount += pen.getDiscountPrice();
             numberGoods++;
 
         }
-    }   public void remove(Pen pen){
+    }
+
+    public void remove(Pen pen) {
         int index = pen.getIndex();
-        if (addCart[index] != null){
+        if (addCart[index] != null) {
             addCart[index] = pen;
             amount -= addCart[index].getPrice();
             amountDiscount -= pen.getDiscountPrice();
