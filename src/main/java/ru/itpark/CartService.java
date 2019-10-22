@@ -1,19 +1,17 @@
 package ru.itpark;
 
-import java.util.Arrays;
-
 public class CartService {
     private int amount;
     private int amountDiscount;
     private int numberGoods;
     private int size = 10;
-    private Pen[] addCart = new Pen[size];
+    private Pen[] Cart = new Pen[size];
 
     public void add(Pen pen) {
         int index = pen.getIndex();
-        if (addCart[index] == null) {
-            addCart[index] = pen;
-            amount += addCart[index].getPrice();
+        if (Cart[index] == null) {
+            Cart[index] = pen;
+            amount += Cart[index].getPrice();
             amountDiscount += pen.getDiscountPrice();
             numberGoods++;
 
@@ -22,9 +20,9 @@ public class CartService {
 
     public void remove(Pen pen) {
         int index = pen.getIndex();
-        if (addCart[index] != null) {
-            addCart[index] = pen;
-            amount -= addCart[index].getPrice();
+        if (Cart[index] != null) {
+            Cart[index] = pen;
+            amount -= Cart[index].getPrice();
             amountDiscount -= pen.getDiscountPrice();
             numberGoods--;
 
@@ -71,11 +69,11 @@ public class CartService {
         this.size = size;
     }
 
-    public Pen[] getAddCart() {
-        return addCart;
+    public Pen[] getCart() {
+        return Cart;
     }
 
-    public void setAddCart(Pen[] addCart) {
-        this.addCart = addCart;
+    public void setCart(Pen[] cart) {
+        this.Cart = cart;
     }
 }
